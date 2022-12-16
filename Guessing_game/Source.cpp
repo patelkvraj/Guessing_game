@@ -29,6 +29,13 @@ __________________
 #include <iostream>
 using namespace std;
 
+//	function prototypes
+int binarySearch(int, int, int);
+
 int main() {
+
 	return 0;	//	no return 
 }
+
+
+
