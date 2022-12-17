@@ -37,5 +37,14 @@ int main() {
 	return 0;	//	no return 
 }
 
+/*
+Name	:	binarySearch()
+Purpose	:	to give the position of a number in an array
+Input	:	int [], int int
+Output	:	int
+*/
+int binarySearch(int arr[], int size, int value) {
+
+}
 
 
