@@ -27,6 +27,7 @@ __________________
 */
 
 #include <iostream>
+#include <ctime>
 using namespace std;
 
 //	function prototypes
@@ -37,7 +38,9 @@ int main() {
 	int const SIZE = 15;
 	int list[SIZE] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
 
-	cout << binarySearch(list, SIZE, 2);
+	/* Computer's number selected at random */
+	srand(time(NULL)); //	seeding the random number sequence, so we get a different sequence of numbers for each execution 
+	cout << (rand() % 15) + 1;
 
 	return 0;	//	no return 
 }
