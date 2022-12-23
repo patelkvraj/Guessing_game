@@ -35,13 +35,35 @@ int binarySearch(int [], int, int);
 
 int main() {
 
-	int const SIZE = 15;
-	int list[SIZE] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
+	/* variable declartion */
+	int user_number;	// hold user's number
+	int computer_number; // hold computer's number
+
+	//int const SIZE = 15;
+	//int list[SIZE] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
 
 	/* Computer's number selected at random */
 	srand(time(NULL)); //	seeding the random number sequence, so we get a different sequence of numbers for each execution 
-	cout << (rand() % 15) + 1;
+	computer_number = (rand() % 15) + 1;
+	//cout << "My number is " << computer_number;
 
+	int found = false;	//	flag
+
+	while (!found) {
+		cout << "\nWhat's my number? "; 
+		cin >> user_number;
+
+		if (user_number < computer_number) {
+			cout << "My number is higher than " << user_number << ". Guess higher ->";
+		}
+		else if (user_number > computer_number) {
+			cout << "My number is lower than " << user_number << ". Guess lower <-";
+		}
+		else {
+			cout << "Yes! That's my number!";
+			found = true;
+		}
+	}
 	return 0;	//	no return 
 }
 
