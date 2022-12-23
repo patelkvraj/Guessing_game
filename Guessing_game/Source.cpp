@@ -82,15 +82,15 @@ int binarySearch(int arr[], int size, int value) {
 
 	while (!found && first <= last) {	// WHY ? first <= last 
 		middle = (first + last) / 2;	//	calculate mid point
-		if (arr[middle] == value) {		// if value is found at mid
-			found = true;
-			position = middle;
-		}
-		else if (arr[middle] < value) {		// if value is in upper half	
+		if (arr[middle] < value) {		// if value is in upper half	
 			first = middle + 1;
 		}
-		else {							// if value is in lower half
+		else if (arr[middle] > value) {	// if value is in lower half
 			last = middle - 1;			
+		}
+		else {							// if value is found at mid
+			found = true;
+			position = middle;
 		}
 	}
 	return position;
